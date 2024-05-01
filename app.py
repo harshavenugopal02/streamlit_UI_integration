@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 
-# Define accuracy and loss values for each model
 accuracy_values = {
     "LRCN Entropy Based": 0.8934,
     "ConvLSTM Sequence Based": 0.7869,
@@ -14,21 +13,17 @@ loss_values = {
     "ConvLSTM Entropy Based": 0.31
 }
 
-# Define file paths for the graphs
 graph_files = {
     "LRCN Entropy Based": ["Acc_LE.png", "Loss_LE.png"],
     "ConvLSTM Sequence Based": ["Acc_CS.png", "Loss_CS.png"],
     "ConvLSTM Entropy Based": ["Acc_CE.png", "Loss_CE.png"]
 }
 
-# Set title and page layout
 st.title('Model Performance Dashboard')
 st.markdown("---")
 
-# Display selection button for choosing the model
 selected_model = st.selectbox('Select Model', list(accuracy_values.keys()))
 
-# Display accuracy and loss values for the selected model
 st.header(f'{selected_model} Performance Overview')
 st.write(f'**Accuracy:** {accuracy_values[selected_model]:.2%}')
 st.write(f'**Loss:** {loss_values[selected_model]:.2%}')
