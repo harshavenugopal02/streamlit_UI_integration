@@ -4,7 +4,7 @@ from PIL import Image
 accuracy_values = {
     "LRCN Entropy Based": 0.8934,
     "ConvLSTM Sequence Based": 0.7869,
-    "ConvLSTM Entropy Based": 0.92
+    "ConvLSTM Entropy Based": 0.8197
 }
 
 loss_values = {
